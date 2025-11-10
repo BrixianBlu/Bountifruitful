@@ -3,12 +3,14 @@ package net.brixian.bountfruitful;
 
 import net.brixian.bountfruitful.block.BountifruitfulBlockKeys;
 import net.brixian.bountfruitful.item.BountifruitfulItemKeys;
+import net.brixian.bountfruitful.world.tree.BountifruitfulSaplingGenerator;
 import net.minecraft.block.*;
 import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.registry.RegistryKey;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 
@@ -37,8 +39,8 @@ public class BountifruitfulBlocks {
 
     public static final Block ATTACHED_CANTALOUPE_STEM = registerBlockWithoutBlockItem("attached_cantaloupe_stem",
             new AttachedStemBlock(
-                    BountifruitfulBlockKeys.CANTALOUPE_STEM,
                     BountifruitfulBlockKeys.CANTALOUPE,
+                    BountifruitfulBlockKeys.CANTALOUPE_STEM,
                     BountifruitfulItemKeys.CANTALOUPE_SEEDS,
                     AbstractBlock.Settings.create()
                             .mapColor(MapColor.DARK_GREEN)
@@ -47,11 +49,13 @@ public class BountifruitfulBlocks {
                             .sounds(BlockSoundGroup.WOOD)
                             .pistonBehavior(PistonBehavior.DESTROY)));
 
+    //Saplings
+    public static final Block MANGOSTEEN_SAPLING = registerBlock("mangosteen_sapling",
+            new SaplingBlock(BountifruitfulSaplingGenerator.MANGOSTEEN, AbstractBlock.Settings.copy(Blocks.OAK_SAPLING)));
+
     //Blocks
-    public static final Block CANTALOUPE = registerBlock("cantaloupe",
+    public static final Block CANTALOUPE = registerBlock( "cantaloupe",
             new Block(AbstractBlock.Settings.create()));
-
-
 
 
     private static Block registerBlockWithoutBlockItem(String name, Block block) {

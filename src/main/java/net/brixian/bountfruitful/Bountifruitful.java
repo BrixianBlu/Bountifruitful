@@ -1,5 +1,6 @@
 package net.brixian.bountfruitful;
 
+import net.brixian.bountfruitful.world.gen.BountifruitfulWorldGeneration;
 import net.fabricmc.api.ModInitializer;
 
 import org.slf4j.Logger;
@@ -17,5 +18,8 @@ public class Bountifruitful implements ModInitializer {
 	public void onInitialize() {
 		BountifruitfulItems.registerBountfruitfulItems();
 		BountifruitfulBlocks.registerBountfruitfulBlocks();
+
+		//Worldgen
+		BountifruitfulWorldGeneration.generateBountifruitfulWorldGen();
 	}
 }
