@@ -1,5 +1,7 @@
 package net.brixian.bountfruitful;
 
+import net.brixian.bountfruitful.datagen.BountifruitfulLootTableProvider;
+import net.brixian.bountfruitful.datagen.BountifruitfulModelProvider;
 import net.brixian.bountfruitful.datagen.BountifruitfulRegistryDataGenerator;
 import net.brixian.bountfruitful.world.BountifruitfulConfiguredFeatures;
 import net.brixian.bountfruitful.world.BountifruitfulPlacedFeatures;
@@ -13,6 +15,8 @@ public class BountifruitfulDataGenerator implements DataGeneratorEntrypoint {
 	public void onInitializeDataGenerator(FabricDataGenerator fabricDataGenerator) {
 		FabricDataGenerator.Pack pack =fabricDataGenerator.createPack();
 		pack.addProvider(BountifruitfulRegistryDataGenerator::new);
+		pack.addProvider(BountifruitfulLootTableProvider::new);
+		pack.addProvider(BountifruitfulModelProvider::new);
 		//Datagen
 
 	}

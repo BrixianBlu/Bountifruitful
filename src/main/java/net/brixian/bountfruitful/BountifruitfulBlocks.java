@@ -2,6 +2,7 @@ package net.brixian.bountfruitful;
 
 
 import net.brixian.bountfruitful.block.BountifruitfulBlockKeys;
+import net.brixian.bountfruitful.block.GhastPepperCropBlock;
 import net.brixian.bountfruitful.item.BountifruitfulItemKeys;
 import net.brixian.bountfruitful.world.tree.BountifruitfulSaplingGenerator;
 import net.minecraft.block.*;
@@ -12,6 +13,7 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.sound.BlockSoundGroup;
+import net.minecraft.util.DyeColor;
 import net.minecraft.util.Identifier;
 
 public class BountifruitfulBlocks {
@@ -48,6 +50,9 @@ public class BountifruitfulBlocks {
                             .breakInstantly()
                             .sounds(BlockSoundGroup.WOOD)
                             .pistonBehavior(PistonBehavior.DESTROY)));
+
+    public static final Block GHAST_PEPPER_CROP = registerBlockWithoutBlockItem("ghast_pepper_crop",
+            new GhastPepperCropBlock(AbstractBlock.Settings.create().sounds(BlockSoundGroup.CROP).pistonBehavior(PistonBehavior.DESTROY).ticksRandomly().noCollision().mapColor(MapColor.BRIGHT_TEAL)));
 
     //Saplings
     public static final Block MANGOSTEEN_SAPLING = registerBlock("mangosteen_sapling",

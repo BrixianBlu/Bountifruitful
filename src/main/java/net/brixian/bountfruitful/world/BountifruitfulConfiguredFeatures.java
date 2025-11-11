@@ -49,10 +49,10 @@ public class BountifruitfulConfiguredFeatures {
 
 		register(context, FIG_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
 				BlockStateProvider.of(Blocks.IRON_BLOCK),
-				new StraightTrunkPlacer(2, 3, 1),
+				new StraightTrunkPlacer(4, 3, 3),
 
 				BlockStateProvider.of(Blocks.MOSS_BLOCK),
-				new CherryFoliagePlacer(ConstantIntProvider.create(4), ConstantIntProvider.create(4), ConstantIntProvider.create(4), 0, 0.5f, 0.5f, 0.5f),
+				new CherryFoliagePlacer(ConstantIntProvider.create(4), ConstantIntProvider.create(3), ConstantIntProvider.create(4), 0, 0.5f, 0.5f, 0.5f),
 
 				new TwoLayersFeatureSize(1, 0, 2)).build());
 
