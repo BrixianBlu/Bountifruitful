@@ -53,6 +53,12 @@ public class BountifruitfulBlocks {
     public static final Block MANGOSTEEN_SAPLING = registerBlock("mangosteen_sapling",
             new SaplingBlock(BountifruitfulSaplingGenerator.MANGOSTEEN, AbstractBlock.Settings.copy(Blocks.OAK_SAPLING)));
 
+    public static final Block PAPAYA_SAPLING = registerBlock("papaya_sapling",
+            new SaplingBlock(BountifruitfulSaplingGenerator.PAPAYA, AbstractBlock.Settings.copy(Blocks.ACACIA_SAPLING)));
+
+    public static final Block FIG_SAPLING = registerBlock("fig_sapling",
+            new SaplingBlock(BountifruitfulSaplingGenerator.FIG, AbstractBlock.Settings.copy(Blocks.ACACIA_SAPLING)));
+
     //Blocks
     public static final Block CANTALOUPE = registerBlock( "cantaloupe",
             new Block(AbstractBlock.Settings.create()));

@@ -14,12 +14,17 @@ import net.minecraft.util.math.intprovider.ConstantIntProvider;
 import net.minecraft.world.gen.feature.*;
 import net.minecraft.world.gen.feature.size.TwoLayersFeatureSize;
 import net.minecraft.world.gen.foliage.BlobFoliagePlacer;
+import net.minecraft.world.gen.foliage.CherryFoliagePlacer;
 import net.minecraft.world.gen.stateprovider.BlockStateProvider;
+import net.minecraft.world.gen.trunk.CherryTrunkPlacer;
 import net.minecraft.world.gen.trunk.StraightTrunkPlacer;
 
 public class BountifruitfulConfiguredFeatures {
 
-	public static final RegistryKey<ConfiguredFeature<?, ?>> MANGOSTEEN_KEY = registerKey("driftwood");
+	public static final RegistryKey<ConfiguredFeature<?, ?>> MANGOSTEEN_KEY = registerKey("mangosteen");
+	public static final RegistryKey<ConfiguredFeature<?, ?>> PAPAYA_KEY = registerKey("papaya");
+	public static final RegistryKey<ConfiguredFeature<?, ?>> FIG_KEY = registerKey("fig");
+
 
 	public static void bootstrap(Registerable<ConfiguredFeature<?, ?>> context) {
 
@@ -32,6 +37,26 @@ public class BountifruitfulConfiguredFeatures {
 				new BlobFoliagePlacer(ConstantIntProvider.create(4), ConstantIntProvider.create(1), 3),
 
 				new TwoLayersFeatureSize(1, 0, 2)).build());
+
+		register(context, PAPAYA_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
+				BlockStateProvider.of(Blocks.IRON_BLOCK),
+				new StraightTrunkPlacer(2, 3, 1),
+
+				BlockStateProvider.of(Blocks.MOSS_BLOCK),
+				new BlobFoliagePlacer(ConstantIntProvider.create(2), ConstantIntProvider.create(1), 1),
+
+				new TwoLayersFeatureSize(1, 0, 2)).build());
+
+		register(context, FIG_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
+				BlockStateProvider.of(Blocks.IRON_BLOCK),
+				new StraightTrunkPlacer(2, 3, 1),
+
+				BlockStateProvider.of(Blocks.MOSS_BLOCK),
+				new CherryFoliagePlacer(ConstantIntProvider.create(4), ConstantIntProvider.create(4), ConstantIntProvider.create(4), 0, 0.5f, 0.5f, 0.5f),
+
+				new TwoLayersFeatureSize(1, 0, 2)).build());
+
+
 	}
 
 	public static RegistryKey<ConfiguredFeature<?, ?>> registerKey(String name) {
