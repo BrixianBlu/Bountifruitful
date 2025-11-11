@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "bountifruitful:block/ghast_pepper_crop_stage1"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "bountifruitful:block/papaya_sapling"
+  }
+}

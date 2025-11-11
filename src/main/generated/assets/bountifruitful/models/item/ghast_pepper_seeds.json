@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "bountifruitful:item/ghast_pepper_seeds"
+  }
+}

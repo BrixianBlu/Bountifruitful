@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "bountifruitful:block/mangosteen_sapling"
+  }
+}
