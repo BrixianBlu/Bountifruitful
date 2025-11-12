@@ -1,0 +1,30 @@
+{
+  "variants": {
+    "facing=down": {
+      "model": "bountifruitful:block/echobloom",
+      "x": 180
+    },
+    "facing=east": {
+      "model": "bountifruitful:block/echobloom",
+      "x": 90,
+      "y": 90
+    },
+    "facing=north": {
+      "model": "bountifruitful:block/echobloom",
+      "x": 90
+    },
+    "facing=south": {
+      "model": "bountifruitful:block/echobloom",
+      "x": 90,
+      "y": 180
+    },
+    "facing=up": {
+      "model": "bountifruitful:block/echobloom"
+    },
+    "facing=west": {
+      "model": "bountifruitful:block/echobloom",
+      "x": 90,
+      "y": 270
+    }
+  }
+}

@@ -2,6 +2,7 @@ package net.brixian.bountfruitful;
 
 
 import net.brixian.bountfruitful.block.BountifruitfulBlockKeys;
+import net.brixian.bountfruitful.block.EchobloomBlock;
 import net.brixian.bountfruitful.block.GhastPepperCropBlock;
 import net.brixian.bountfruitful.item.BountifruitfulItemKeys;
 import net.brixian.bountfruitful.world.tree.BountifruitfulSaplingGenerator;
@@ -67,6 +68,8 @@ public class BountifruitfulBlocks {
     //Blocks
     public static final Block CANTALOUPE = registerBlock( "cantaloupe",
             new Block(AbstractBlock.Settings.create()));
+    public static final Block ECHOBLOOM = registerBlock("echobloom",
+            new EchobloomBlock(AbstractBlock.Settings.create()));
 
 
     private static Block registerBlockWithoutBlockItem(String name, Block block) {
